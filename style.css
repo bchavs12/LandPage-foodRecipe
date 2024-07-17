@@ -1,0 +1,61 @@
+:root {
+  /* Surface colors */
+  --background-color: #573824;
+  --surface-color: #F0E8C2;
+
+  /* Text colors */
+  --text-color-primary: #291B1A;
+  --text-color-secondary: #573A37;
+  --text-color-on-bg: #F0E8C2;
+
+  /* Typography */
+  --heading1: ;
+  --heading2: ;
+  --paragraph: ;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-image: url("./assets/bg.jpg");
+  background-size: cover;
+
+  font-family: "Alice", serif;
+  font-weight: 400;
+  font-style: normal;
+
+  -webkit-font-smoothing: antialiased;
+}
+
+#container {}
+
+/* task overflow scrollbar costumization */
+/* width */
+::-webkit-scrollbar {
+  width: 4px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: var(--surface-color);
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: var(--surface-color);
+  /* border-radius: 5px; */
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: var(--surface-color);
+}
+
+
+.border {
+  border: 1px solid blue;
+}
