@@ -9,9 +9,9 @@
   --text-color-on-bg: #F0E8C2;
 
   /* Typography */
-  --heading1: ;
-  --heading2: ;
-  --paragraph: ;
+  --heading1: 2.5rem "Alice", serif;
+  --heading2: 1.5rem/150% "Alice", serif;
+  --paragraph: 1rem/150% "Alice", serif;
 }
 
 * {
@@ -29,33 +29,109 @@ body {
   font-style: normal;
 
   -webkit-font-smoothing: antialiased;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 48px 100px;
 }
 
-#container {}
+#container {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+
+  width: 800px;
+  padding: 1.5rem;
+
+  background-color: var(--surface-color);
+  border-radius: 24px;
+
+  header {
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: fill;
+      border-radius: 12px;
+    }
+  }
+
+  main {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    padding: 0 1.5rem;
+
+    #about {
+      h1 {
+        font: var(--heading1);
+        color: var(--text-color-primary);
+        margin-bottom: .5rem;
+      }
+
+      p+p {
+        font: var(--paragraph);
+        color: var(--text-color-secondary);
+        margin-top: .75rem;
+      }
+    }
+
+    #ingredients {
+      h2 {
+        font: var(--heading2);
+        color: var(--text-color-primary);
+        margin-bottom: .5rem;
+      }
+
+      ul {
+        padding-left: 1.5rem;
+
+        li {
+          font: var(--paragraph);
+          color: var(--text-color-secondary);
+        }
+      }
+    }
+
+    #preparation {
+      h2 {
+        font: var(--heading2);
+        color: var(--text-color-primary);
+      }
+
+      p {
+        font: var(--paragraph);
+        color: var(--text-color-secondary);
+      }
+
+    }
+
+  }
+
+}
+
+.border {
+  border: 1px solid blue;
+}
 
 /* task overflow scrollbar costumization */
 /* width */
 ::-webkit-scrollbar {
-  width: 4px;
+  width: 8px;
 }
 
 /* Track */
 ::-webkit-scrollbar-track {
-  background: var(--surface-color);
+  background: var(--background-color);
 }
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
   background: var(--surface-color);
-  /* border-radius: 5px; */
+  border-radius: 4px;
 }
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
   background: var(--surface-color);
-}
-
-
-.border {
-  border: 1px solid blue;
 }
